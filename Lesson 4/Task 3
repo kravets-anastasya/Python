@@ -1,0 +1,70 @@
+Задание 3
+Написать программу подсчета стоимости разговора для разных мобильных операторов. Пользователь вводит стоимость разговора и выбирает с какого на какой оператор он звонит. Вывести
+стоимость на экран.
+
+beeline_beeline = 5.2
+beeline_banother_operator = 10
+
+megafon_megafon = 8.65
+megafon_banother_operator = 15
+
+mts_mts = 3.8
+mts_banother_operator = 12
+
+talk_time = float(input("Введите время разговора: "))
+
+print('''
+Выберите, с какого оператора вы звоните:" 
+ 1: билайн;
+ 2: МегаФон;
+ 3: мтс
+  ''')
+namber = int(input("Введите ваш выбор: "))
+
+if namber == 1:
+  print('''
+  Выберите, на какого оператора вы звонили: 
+   1: билайн;
+   2: МегаФон;
+   3: мтс
+    ''')
+  namber2 = int(input("Введите ваш выбор: "))
+
+  if namber2 == 1:
+    the_cost_of_the_conversation = talk_time * beeline_beeline
+    print("Стоимость звонка:", the_cost_of_the_conversation, "рублей")
+  if namber2 == 2 or namber2 == 3:
+    the_cost_of_the_conversation = talk_time * beeline_banother_operator
+    print("Стоимость звонка:", the_cost_of_the_conversation, "рублей")
+
+elif namber == 2:
+  print('''
+  Выберите, на какого оператора вы звонили: 
+   1: билайн;
+   2: МегаФон;
+   3: мтс
+    ''')
+  namber2 = int(input("Введите ваш выбор: "))
+
+  if namber2 == 2:
+    the_cost_of_the_conversation = talk_time * megafon_megafon
+    print("Стоимость звонка:", the_cost_of_the_conversation, "рублей")
+  if namber2 == 1 or namber2 == 3:
+    the_cost_of_the_conversation = talk_time * megafon_banother_operator
+    print("Стоимость звонка:", the_cost_of_the_conversation, "рублей")
+
+elif namber == 3:
+  print('''
+  Выберите, на какого оператора вы звонили: 
+   1: билайн;
+   2: МегаФон;
+   3: мтс
+    ''')
+  namber2 = int(input("Введите ваш выбор: "))
+
+  if namber2 == 3:
+    the_cost_of_the_conversation = talk_time * mts_mts
+    print("Стоимость звонка:", the_cost_of_the_conversation, "рублей")
+  if namber2 == 1 or namber2 == 2:
+    the_cost_of_the_conversation = talk_time * mts_banother_operator
+    print("Стоимость звонка:", the_cost_of_the_conversation, "рублей")
