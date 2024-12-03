@@ -1,0 +1,45 @@
+Задание 3 (поиграла чуток) Пользователь вводит с клавиатуры количество метров. Требуется вывести результат перевода метров в сантиметры, дециметры, миллиметры, мили.
+
+metre = int(input('Введите число в метрах: '))
+choice = 0
+
+print("Вы хотите вывести число в:", end="")
+print('''
+1 - дм
+2 - см
+3 - мм
+4 - милях
+5 - все варианты
+ ''')
+
+while choice != 1 | choice != 2 | choice != 3 | choice != 4 | choice != 5:
+
+  choice = int(input('Введите ваш выбор: '))
+
+  if choice == 1:
+    print("Ваше число в дм:", metre * 10)
+    break
+
+  elif choice == 2:
+    print("Ваше число в см:", metre * 100)
+    break
+
+  elif choice == 3:
+    print("Ваше число в мм:", metre * 1000)
+    break
+
+  elif choice == 4:
+    print("Ваше число в милях:", float (metre) * 0.00062)
+    break
+
+  elif choice == 5:
+    print("\n", "Ваше число в дм: ", metre * 10, sep = "")
+    print("Ваше число в см:", metre * 100)
+    print("Ваше число в мм:", metre * 1000)
+    print("Ваше число в милях:", float (metre) * 0.00062)
+    break
+
+  elif choice > 5:
+    print("Вы выбрали неверное число!")
+  elif choice < 1:
+    print("Вы выбрали неверное число!")
