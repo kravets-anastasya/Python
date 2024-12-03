@@ -1,0 +1,24 @@
+Задание 1 Пользователь вводит с клавиатуры число в диапазоне от 1 до 100. 
+Если число кратно 3 (делится на 3 без остатка) нужно вывести слово Fizz. 
+Если число кратно 5 нужно вывести слово Buzz. Если число кратно 3 и 5 нужно вывести Fizz Buzz. 
+Если число не кратно не 3 и 5 нужно вывести само число.
+
+Если пользователь ввел значение не в диапазоне от 1 до 100 требуется вывести сообщение об ошибке.
+
+namber = int(input('Введите число от 1 до 100: '))
+
+multiplicity_of_3 = namber % 3
+multiplicity_of_5 = namber % 5
+
+#print("Ваше число:", multiplicity_of_3)
+#print("Ваше число:", multiplicity_of_5)
+
+if namber > 0 and namber < 101:
+  if multiplicity_of_3 == 0:
+    print("Fizz", end = ' ')
+  if multiplicity_of_5 == 0:
+    print("Buzz")
+  if multiplicity_of_3 > 0 and multiplicity_of_5 > 0: # или думаю можно написать так: multiplicity_of_3 != 0 and multiplicity_of_5 != 0:
+    print('Ваше число не кратно 3 и не кратно 5. Вы ввели:', namber)
+else:
+  print("Вы ввели неверное число!")
