@@ -1,0 +1,36 @@
+Задание 2 Пользователь вводит с клавиатуры три числа. В зависимости от выбора пользователя программа выводит на экран максимум из трёх, минимум из трёх или среднеарифметическое трёх чисел.
+
+number1 = int(input('Введите 1е число: '))
+number2 = int(input('Введите 2е число: '))
+number3 = int(input('Введите 3е число: '))
+
+print('''
+Вы хотите вывести:
+1 - максимум из трёх
+2 - минимум из трёх
+3 - среднеарифметическое трёх чисел
+ ''')
+
+number = input("Введите ваш выбор: ")
+result = number1
+
+if number == '1':
+  if result < number2:
+     result = number2
+  if result < number3:
+     result = number3
+  print("\nМаксимальное число", result)
+
+elif number == '2':
+  if result > number2:
+    result = number2
+  if result > number3:
+    result = number3
+  print("\nМинимальное число", result)
+
+elif number == '3':
+    result = (number1 + number2 + number3) / 3
+    print("\nСреднеарифметическое трёх чисел", result)
+
+else:
+    print("\nВы ввели неверное число!")
