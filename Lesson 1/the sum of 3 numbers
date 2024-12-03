@@ -1,0 +1,11 @@
+# Задание 1 Пользователь вводит с клавиатуры три числа. Необходимо найти сумму чисел, произведение чисел. Результат вычислений вывести на экран.
+
+number1 = input('Введите 1е число: ')
+number2 = input('Введите 2е число: ')
+number3 = input('Введите 3е число: ')
+
+sum = int(number1) + int(number2) + int(number3)
+print("Сумма чисел составила: ", int(sum))
+
+the_product_of_numbers = int(number1) * int(number2) * int(number3)
+print("Произведение чисел составило: ", int(the_product_of_numbers))
