@@ -1,0 +1,62 @@
+Задание 4
+Зарплата менеджера составляет 200$дол. + процент
+от продаж, продажи до 500$дол. — 3%, от 500 до 1000
+— 5%, свыше 1000 — 8%. Пользователь вводит с
+клавиатуры уровень продаж для трех менеджеров. Определить их зарплату, определить лучшего менеджера, начислить ему премию 200$,
+вывести итоги на экран.
+
+manager_salary = 200 # дол.
+sum = 1
+reward = 200
+result = 1
+
+sales_up_to_500 = 3 # %
+from_500_to_1000 = 5 # %
+over_1000 = 8 # %
+
+sales_level_1 = 500
+sales_level_2 = 1000
+
+managers_sales_level_1 = float(input("Введите уровень продаж менеджера 1: "))
+
+if managers_sales_level_1 < sales_level_1:
+  sum1 = (managers_sales_level_1 * sales_up_to_500 / 100) + manager_salary
+  print("Зарплата менеджера 1 равна:", sum1)
+elif managers_sales_level_1 < sales_level_2 and managers_sales_level_1 >= sales_level_1:
+  sum1 = (managers_sales_level_1 * from_500_to_1000 / 100) + manager_salary
+  print("Зарплата менеджера 1 равна:", sum1)
+elif managers_sales_level_1 >= sales_level_2:
+  sum1 = (managers_sales_level_1 * over_1000 / 100) + manager_salary
+  print("Зарплата менеджера 1 равна:", sum1)
+
+managers_sales_level_2 = float(input("\nВведите уровень продаж менеджера 2: "))
+if managers_sales_level_2 < sales_level_1:
+  sum2 = (managers_sales_level_2 * sales_up_to_500 / 100) + manager_salary
+  print("Зарплата менеджера 2 равна:", sum2)
+elif managers_sales_level_2 < sales_level_2 and managers_sales_level_2 >= sales_level_1:
+  sum2 = (managers_sales_level_2 * from_500_to_1000 / 100) + manager_salary
+  print("Зарплата менеджера 2 равна:", sum2)
+elif managers_sales_level_2 >= sales_level_2:
+  sum2 = (managers_sales_level_2 * over_1000 / 100) + manager_salary
+  print("Зарплата менеджера 2 равна:", sum2)
+
+managers_sales_level_3 = float(input("\nВведите уровень продаж менеджера 3: "))
+if managers_sales_level_3 < sales_level_1:
+  sum3 = (managers_sales_level_3 * sales_up_to_500 / 100) + manager_salary
+  print("Зарплата менеджера 3 равна:", sum3)
+elif managers_sales_level_3 < sales_level_2 and managers_sales_level_3 >= sales_level_1:
+  sum3 = (managers_sales_level_3 * from_500_to_1000 / 100) + manager_salary
+  print("Зарплата менеджера 3 равна:", sum3)
+elif managers_sales_level_3 >= sales_level_2:
+  sum3 = (managers_sales_level_3 * over_1000 / 100) + manager_salary
+  print("Зарплата менеджера 3 равна:", sum3)
+
+if managers_sales_level_1 > managers_sales_level_2 and managers_sales_level_1 > managers_sales_level_3:
+  result = sum1 + reward
+  print("\nЛучший менеджер: №1 и он получает премию", reward, "долларов, его ЗП составляет:", result, "долларов")
+elif managers_sales_level_2 > managers_sales_level_1 and managers_sales_level_2 > managers_sales_level_3:
+  result = sum2 + reward
+  print("\nЛучший менеджер: №2 и он получает премию", reward, "долларов, его ЗП составляет:", result, "долларов")
+elif managers_sales_level_3 > managers_sales_level_1 and managers_sales_level_3 > managers_sales_level_2:
+  result = sum3 + reward
+  print("\nЛучший менеджер: №3 и он получает премию", reward, "долларов, его ЗП составляет:", result, "долларов")
