@@ -1,0 +1,25 @@
+Задание 5 Пользователь с клавиатуры вводит четырёхзначное число. Необходимо перевернуть число и отобразить результат. Например, если введено 4512, результат 2154.
+
+number = int(input('Введите число: '))
+
+number1 = str(number // 1000 % 10)
+number2 = str(number // 100 % 10)
+number3 = str(number // 10 % 10)
+number4 = str(number % 10)
+
+the_product_of_numbers = number4 + number3 + number2 + number1
+
+print("Ваше число:", the_product_of_numbers)
+
+
+
+Второй вариан того же дз
+
+number = int(input('Введите число: '))
+
+number1 = number // 1000 % 10
+number2 = number // 100 % 10
+number3 =  number // 10 % 10
+number4 = number % 10
+
+print("Ваше число: ", number4, number3, number2, number1, sep = "")
