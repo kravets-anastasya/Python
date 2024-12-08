@@ -1,0 +1,40 @@
+Задание 2
+Пользователь вводит с клавиатуры два числа
+(начало и конец диапазона). Требуется проанализировать все числа в этом диапазоне. Нужно
+вывести на экран:
+1. Все числа диапазона;
+2. Все числа диапазона в убывающем порядке;
+3. Все числа, кратные 7;
+4. Количество чисел, кратных 5.
+
+the_beginning_of_the_range = int(input('Введите начало диапазона: '))
+end_of_the_range = int(input('Введите конец диапазона: '))
+counter = 0
+
+print('''
+Выберите, что необходимо вывести на экран:"
+1. Все числа диапазона;
+2. Все числа диапазона в убывающем порядке;
+3. Все числа, кратные 7;
+4. Количество чисел, кратных 5.
+  ''')
+choice = int(input('Введите ваш выбор: '))
+
+if choice == 1:
+  for i in range(the_beginning_of_the_range, end_of_the_range + 1):
+    counter += 1
+    print(f"Число в диапазоне от {the_beginning_of_the_range} до {end_of_the_range} №{counter}: {i}")
+elif choice == 2:
+  for i in range(end_of_the_range, the_beginning_of_the_range - 1, -1):
+    counter += 1
+    print(f"Число в диапазоне от {end_of_the_range} до {the_beginning_of_the_range} №{counter}: {i}")
+elif choice == 3:
+  for i in range(the_beginning_of_the_range, end_of_the_range + 1):
+    if (i % 7) == 0:
+      counter += 1
+      print(f"Число кратное 7 в диапазоне от {the_beginning_of_the_range} до {end_of_the_range} №{counter}: {i}")
+elif choice == 4:
+  for i in range(the_beginning_of_the_range, end_of_the_range + 1):
+    if (i % 5) == 0:
+      counter += 1
+      print(f"Число кратное 5 в диапазоне от {the_beginning_of_the_range} до {end_of_the_range} №{counter}: {i}")
