@@ -1,0 +1,13 @@
+Задание 1
+Пользователь вводит с клавиатуры два числа
+(начало и конец диапазона). Требуется проанализировать все числа в этом диапазоне по следующему правилу: если число кратно 7, его надо
+выводить на экран.
+
+the_beginning_of_the_range = int(input('Введите начало диапазона: '))
+end_of_the_range = int(input('Введите конец диапазона: '))
+counter = 0
+
+for i in range(the_beginning_of_the_range, end_of_the_range + 1):
+  if (i % 7) == 0:
+    counter += 1
+    print(f"Число кратное 7 в диапазоне от {the_beginning_of_the_range} до {end_of_the_range} №{counter}: {i}")
