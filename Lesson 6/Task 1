@@ -1,0 +1,30 @@
+Задание 1 Пользователь вводит с клавиатуры два числа. Нужно посчитать отдельно сумму четных, нечетных и чисел, кратных 9 в указанном диапазоне, а также среднеарифметическое каждой группы.
+
+num1 = int(input("Введите число №1: "))
+num2 = int(input("Введите число №2: "))
+count = num1
+count2 = 0
+count_sum_of_even = 0
+count_sum_of_odd = 0
+the_sum_of_even_numbers = 0
+the_sum_of_odd_numbers = 0
+the_sum_of_multiples_of_9 = 0
+
+while count < num2 + 1:
+  if (count % 2) == 0:
+    the_sum_of_even_numbers += count
+    count += 1
+    count_sum_of_even += 1
+  elif (count % 2) != 0:
+    the_sum_of_odd_numbers += count
+    count += 1
+    count_sum_of_odd += 1
+  if (count % 9) == 0:
+    the_sum_of_multiples_of_9 += count
+    count2 += 1
+print(f"""\nсумма четных чисел: {the_sum_of_even_numbers}
+и их среднее арифметическое:{the_sum_of_even_numbers / count_sum_of_even}\n""")
+print(f"""сумма нечетных чисел: {the_sum_of_odd_numbers}
+и их среднее арифметическое:{the_sum_of_odd_numbers / count_sum_of_odd}\n""")
+print(f"""сумма кратных 9: {the_sum_of_multiples_of_9}
+и их среднее арифметическое:{the_sum_of_multiples_of_9 / count2}\n""")
