@@ -1,0 +1,100 @@
+Задание Вывести на экран фигуры, заполненные зведочками. Диалог с пользователем реализовать при помощи меню.
+
+
+choice = int(input("Введите номер нарисованного квадрата 1-10: ")) # выбор квадрата
+number_of_characters = 20 # количество символов
+counting = number_of_characters # подсчет
+half_a_square = number_of_characters // 2 # половина квадрата
+half_a_square_2 = 0
+symbol = '*' # символ
+whitespace = 0 # пробел
+whitespace_2 = 0
+symbol_2 = ' '
+
+while choice > 10 or choice <= 0:
+  print("Вы ввели неверное число, попробуйте снова")
+  choice = int(input("Введите номер нарисованного квадрата 1-10: ")) # выбор квадрата
+
+if choice == 1:
+  for i in range(number_of_characters + 1):
+    number_of_characters -= 1
+    print(symbol_2 * whitespace, symbol * number_of_characters)
+    whitespace += 1
+
+if choice == 2:
+  for i in range(number_of_characters + 1):
+    number_of_characters -= 1
+    print(symbol * whitespace, symbol_2 * number_of_characters)
+    whitespace += 1
+
+if choice == 3:
+  for i in range(number_of_characters + 1):
+    number_of_characters -= 2
+    print(symbol_2 * whitespace, symbol * number_of_characters, symbol_2 * whitespace)
+    whitespace += 1
+
+if choice == 4:
+  for i in range(number_of_characters + 1):
+    if i > half_a_square:
+        half_a_square -= 1
+        print(symbol_2 * half_a_square, symbol * whitespace, symbol_2 * half_a_square)
+        whitespace += 2
+    else:
+        print(symbol_2 * number_of_characters)
+
+if choice == 5:
+  for i in range(number_of_characters + 1):
+    if i >= half_a_square + 1:
+        half_a_square -= 1
+        print(symbol_2 * half_a_square, symbol * (whitespace_2 + 1), symbol_2 * half_a_square)
+        whitespace_2 += 2
+    else:
+        number_of_characters -= 2
+        print(symbol_2 * whitespace, symbol * (number_of_characters + 1), symbol_2 * whitespace)
+        whitespace += 1
+
+if choice == 6:
+  for i in range(number_of_characters + 1):
+    if i >= half_a_square:
+        half_a_square -= 1
+        print(symbol * (half_a_square + 1), symbol_2 * whitespace_2, symbol * (half_a_square + 1))
+        whitespace_2 += 2
+    else:
+        number_of_characters -= 2
+        print(symbol * (whitespace + 1), symbol_2 * number_of_characters, symbol * (whitespace + 1))
+        whitespace += 1
+
+if choice == 7:
+  for i in range(number_of_characters + 1):
+      if half_a_square > 0:
+        half_a_square -= 1
+        print(symbol * whitespace, symbol_2 * (half_a_square + 1))
+        whitespace += 2
+      else:
+        half_a_square_2 += 1
+        print(symbol * whitespace, symbol_2 * (half_a_square_2 + 1))
+        whitespace -= 2
+
+if choice == 8:
+  half_a_square_2 = half_a_square
+  for i in range(number_of_characters + 1):
+      if half_a_square > 0:
+        number_of_characters -= 1
+        print(symbol_2 * number_of_characters, symbol * (whitespace + 1))
+        whitespace += 1
+        half_a_square -= 1
+      else:
+        half_a_square_2 += 1
+        print(symbol_2 * half_a_square_2, symbol * (whitespace - 1))
+        whitespace -= 1
+
+if choice == 9:
+  for i in range(number_of_characters + 1):
+    number_of_characters -= 1
+    print(symbol * number_of_characters)
+
+if choice == 10:
+  for i in range(number_of_characters):
+    number_of_characters -= 1
+    print(symbol_2 * number_of_characters, symbol * whitespace)
+    whitespace += 1
